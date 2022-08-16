@@ -50,3 +50,42 @@ def extract_rows(df, col_name):
         elif 'Grado' in v_splited[0]:
             index_lst.append(i)
     return index_lst
+
+
+def describe_df(df):
+    print('Shape of dataframe is:')
+    print(df.shape)
+    print('')
+    print('Data types of dataframe are:') 
+    print(df.dtypes)
+    print('')
+    print('Summary of numeric data is:')
+    print(df.describe().T)
+    print('')
+    print('Summary of categorical data is:')
+    print(df.describe(include='object').T)
+    print('')
+    print('Does it contains missing values?')
+    print(df.isna().sum())
+    print('')
+    print('Value counts:')
+    for col in df:
+        print(df[col].value_counts(),'\n')
+        
+        
+def create_histograms(df, col_name_category, col_name_values):
+    fig, ax = plt.subplots(dpi=100)
+    for i in df[col_name_category].unique():
+        item = df[col_name_values].loc[(df[col_name_category] == i) == True]
+        ax = sns.histplot(item, palette= 'colorblind')
+        ax.set_title('Histogram of {}'.format(i))
+        plt.show()
+        
+        
+def create_boxplots(df, col_name_category, col_name_values):
+    fig, ax = plt.subplots(dpi=100)
+    for i in df[col_name_category].unique():
+        item = df[col_name_values].loc[(df[col_name_category] == i) == True]
+        ax = sns.boxplot(item, palette= 'colorblind')
+        ax.set_title('Boxplot of {}'.format(i))
+        plt.show()
