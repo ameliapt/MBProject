@@ -38,3 +38,51 @@ def normalize_json(initial_df):
 
     return df
 
+
+def extract_rows(df, col_name):
+    for i,v in enumerate(df[col_name]):
+        index_lst = []
+        v_splited = v.split('.')
+        if 'Personal' in v_splited[0]:
+            index_lst.append(i)
+        if 'Número de plazas' in v_splited[0]:
+            index_lst.append(i)
+        elif 'Grado' in v_splited[0]:
+            index_lst.append(i)
+    return index_lst
+
+def extract_rows(df, col_name):
+    for i,v in enumerate(df[col_name]):
+        index_lst = []
+        v_splited = v.split('.')
+        if 'Personal' in v_splited[0]:
+            index_lst.append(i)
+        if 'Número de plazas' in v_splited[0]:
+            index_lst.append(i)
+        elif 'Grado' in v_splited[0]:
+            index_lst.append(i)
+    return index_lst
+
+def extract_rows(df, col_name):
+    index_lst = []
+    for i,v in enumerate(df[col_name]):
+        v_splited = v.split('.')
+        if 'Personal' in v_splited[0]:
+            index_lst.append(i)
+        if 'Número de plazas' in v_splited[0]:
+            index_lst.append(i)
+        elif 'Grado' in v_splited[0]:
+            index_lst.append(i)
+    return index_lst
+
+def extract_rows(df, col_name):
+    index_lst = []
+    for i,v in enumerate(df[col_name]):
+        v_splited = v.split('.')
+        if 'Personal' in v_splited[0]:
+            index_lst.append(i)
+        if 'Número de plazas' in v_splited[0]:
+            index_lst.append(i)
+        elif 'Grado' in v_splited[0]:
+            index_lst.append(i)
+    return index_lst
