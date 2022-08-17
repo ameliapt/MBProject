@@ -1,5 +1,7 @@
 import datetime
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def get_data_and_create_excel_file(url, file_name, path):
     df = pd.read_json(url)
@@ -52,6 +54,19 @@ def extract_rows(df, col_name):
     return index_lst
 
 
+def change_value(row):
+    if row == 'Residentes en el Extranjero':
+        row = 'Residentes en el extranjero'
+        return row
+    else:
+        return row
+
+    
+def find_string(df, col_name, string):
+    df = df.loc[df[col_name].str.contains(string)]
+    return df, df.index
+
+
 def describe_df(df):
     print('Shape of dataframe is:')
     print(df.shape)
@@ -65,7 +80,7 @@ def describe_df(df):
     print('Summary of categorical data is:')
     print(df.describe(include='object').T)
     print('')
-    print('Does it contains missing values?')
+    print('Does it contain missing values?')
     print(df.isna().sum())
     print('')
     print('Value counts:')
@@ -89,3 +104,25 @@ def create_boxplots(df, col_name_category, col_name_values):
         ax = sns.boxplot(item, palette= 'colorblind')
         ax.set_title('Boxplot of {}'.format(i))
         plt.show()
+        
+        
+def detect_outliers(df, col_name):
+    q1 = df[col_name].quantile(q= 0.25)
+    q3 = df[col_name].quantile(q= 0.75)
+    iqr = q3 - q1
+
+    # Upper and lower limit
+    lower_limit = q1 - 1.5*iqr
+    upper_limit = q3 + 1.5*iqr
+    
+    outliers_lst = df[col_name][(df[col_name] >= upper_limit) | (df[col_name] <= lower_limit)]
+    outliers_idx = df[col_name][(df[col_name] >= upper_limit) | (df[col_name] <= lower_limit)].index
+
+    print('Q1 is:', q1)
+    print('Q3 is:', q3)
+    print('IQR is:', iqr)
+    print('Upper limit is:', upper_limit)
+    print('Lower limit is:', lower_limit)
+    
+    return outliers_lst, outliers_idx
+    
