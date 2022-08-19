@@ -692,23 +692,3 @@ def create_boxplots(df, col_name_category, col_name_values):
         ax.set_title('Boxplot of {}'.format(i))
         plt.show()
         
-        
-def detect_outliers(df, col_name):
-    q1 = df[col_name].quantile(q= 0.25)
-    q3 = df[col_name].quantile(q= 0.75)
-    iqr = q3 - q1
-
-    # Upper and lower limit
-    lower_limit = q1 - 1.5*iqr
-    upper_limit = q3 + 1.5*iqr
-    
-    outliers_lst = df[col_name][(df[col_name] >= upper_limit) | (df[col_name] <= lower_limit)]
-    outliers_idx = df[col_name][(df[col_name] >= upper_limit) | (df[col_name] <= lower_limit)].index
-
-    print('Q1 is:', q1)
-    print('Q3 is:', q3)
-    print('IQR is:', iqr)
-    print('Upper limit is:', upper_limit)
-    print('Lower limit is:', lower_limit)
-    
-    return outliers_lst, outliers_idx
