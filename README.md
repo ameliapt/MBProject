@@ -38,7 +38,7 @@ Also, many data points were estimations, so it would be wise to keep updating th
 
 ### 3. **Visualization in Tableau 💻**
 
-The next step of the process was to create the dashboards in Tableau. On the upper side of each dashboard, you’ll find a year selector, so you can compare the data annually. I invite you to check and play with the dashboards in my Tableau Public profile.
+The next step of the process was to create the dashboards in Tableau. On the upper side of each dashboard, you’ll find a year selector, so you can compare the data annually. I invite you to check and play with the dashboards in my Tableau Public profile (https://public.tableau.com/app/profile/amelia3703/viz/MBP/Hotels_and_apartments)
 
 ## 🚀Key takeaways
 
