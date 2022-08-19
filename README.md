@@ -1,6 +1,6 @@
 # Spanish tourism market
 
-## Tourist Hotspots and tourist expenditure
+A tourist hotspots hotel and apartments market and tourist expenditure analysis.
 
 ## 📌 Why this project?
 
@@ -15,23 +15,7 @@ Tourism is one of the main drivers of the Spanish economy and, like many other i
 
 - **Tourist expenditure profile dashboard.** We are a country of “sol y playa” (sun and beach tourism), but is this the main reason tourists visit Spain? I had many questions about the Spanish tourism quality and the expenditure of the visitors… Where do they tend to stay? Which countries spend the most in Spain? And how is this money distributed between CCAA? The answer to these questions can be found in this dashboard.
 
-## 📌 Why this project?
-
-Tourism is one of the main drivers of the Spanish economy and, as many other industries in the world, got hit hard during the COVID pandemic. In order to have a more clear idea of how many money moves this market and how it is distributed, I have decided to create two dashboards from Instituto Nacional de Estadística (INE) data:
-
-- **Hotels and apartments dashboard.** Choose between more than 100 hotspots in Spain and observe how has the hotel and touristic apartments demand and offer evolved from 2017 to mid 2022 (last data available). The metrics included are:
-    - Overnight stays
-    - Beds available
-    - % of beds occupied
-    - IPAP (Touristic Apartment Prices Index)
-    
-    Note: I wanted to include hotel prices data (Average Daily Rate) for hotspots in this dashboard, but the only data available from INE was from 2021 to mid 2022. 
-    
-- **Tourist expenditure profile dashboard.** We are a country of “sol y playa” (sun and beach tourism), but is this the main reason tourists visit Spain? I had many questions about the Spanish tourism quality and the expenditure of the visitors… Where do they tend to stay? Which countries spend the most in Spain? And how is this money distributed between CCAA? The answer to these questions can be found in this dashboard.
-
 ## 👩🏼‍💻 How did I do it?
-
----
 
 One of the main challenges I encountered during this project was deciding how many datasets should I use to build a proper dashboard. Turns out INE has a huge database of tourism data, but it is divided into smaller datasets that, are the same time, are divided by multiple categories. It was not an easy decision, but I finally decided to retrieve data from 16 datasets following these criteria:
 
@@ -57,8 +41,6 @@ Also, there were a lot of estimations, so it would be wise to keep updating the 
 The next step of the process was to create the dashboards in Tableau. On the upper side of each dashboard, you’ll find a year selector, so you can compare the data annually. I invite you to check and play with the dashboards in my Tableau Public profile.
 
 ## 🚀Key takeaways
-
----
 
 - Although the Spanish tourism market took a toll due to the COVID-19 pandemic, recent data seems to indicate that we are on the recovery path.
 - The tourist apartments' beds offer has decreased since 2017. It would be interesting to explore the impact of the tourist property regulation on this matter.
