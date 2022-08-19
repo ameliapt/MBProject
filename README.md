@@ -34,7 +34,7 @@ As I had decided to get smaller datasets from INE, it was not necessary to clean
 
 The most challenging part was cleaning the categorical data. When you retrieve data from INE in JSON format, you’ll get a list of nested dictionaries with lots of information you can discard, but you will also get most of the key categorical data in one column and string format. Therefore, it is necessary to look closely at the unique values of each dataset to separate the data correctly. Also, it was important to be careful with the hotspots' names, as they were not standarized.
 
-Also, many data points were estimations, so it would be wise to keep updating the databases to obtain definite data in the following months.
+Also, many data points were estimated values, so it would be wise to keep updating the databases to obtain definite data in the following months.
 
 ### 3. **Visualization in Tableau 💻**
 
@@ -42,10 +42,10 @@ The next step of the process was to create the dashboards in Tableau. On the upp
 
 ## 🚀Key takeaways
 
-- Although the Spanish tourism market took a toll due to the COVID-19 pandemic, recent data seems to indicate that we are on the recovery path.
+- Although the COVID-19 pandemic took a toll on the Spanish tourism market, recent data seems to indicate that we are on the recovery path.
 - The tourist apartments' beds offer has decreased since 2017. It would be interesting to explore the impact of the tourist property regulation on this matter.
 - Seasonality can be clearly seen when looking at the demand-offer relationship. Overall, the percentage of beds occupied doesn’t exceed 50%.
-- It is interesting to observe how the prices for the touristic apartments handled by tour operators have increased signifcantly more than normal and weekend prices. The price of apartments with capacity of 4 to 6 people increased more than smaller apartments/studios, which may mean than there is now more demand for spacious apartments or less supply (as we saw total appartment supply decrease).
+- It is interesting to observe how the prices for the touristic apartments handled by tour operators have increased signifcantly more than normal and weekend prices. The price of apartments with capacity of 4 to 6 people increased more than smaller apartments/studios, which may mean than there is now more demand for spacious apartments or less supply (as we saw total apartment supply decrease).
 - Sun and beach tourism the main reason to visit our country, but there is also a clear interest in our cultural offer.
 - Cataluña, the Balearic Islands, and the Canary Islands receives more than 50% of the tourist expenditure.
 - Visitors from the Nordic Countries are the most interesting profile in terms of expenditure. It could be interesting to explore this way in a more detailed way.
